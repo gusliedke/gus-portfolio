@@ -1,0 +1,219 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+
+body {
+    background: url(../images/bg.png) repeat top left;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #999999;
+}
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Custom page header */
+.header {
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 48px;
+        padding-bottom: 19px;
+    }
+    // burger menu
+    .menu {
+      cursor: pointer;
+      margin: 0 auto;
+      padding-left: 1.25em;
+      position: relative;
+      width: 40px;
+      height: 40px;
+    }
+    .menu-global {
+      backface-visibility: hidden;
+      position: absolute;
+      left: 0;
+      border-top: 3px solid #999;
+      width: 100%;
+      transition: 0.55s;
+    }
+    .menu-top {
+      top: 0;
+    }
+    .menu-middle {
+      top: 18px;
+    }
+    .menu-bottom {
+      top: 36px;
+    }
+    .menu-top-click {
+      backface-visibility: hidden;
+      top: 15px;
+      transform: rotate(50deg);
+      transition: 0.55s 0.5s;
+    }
+    .menu-middle-click {
+      opacity: 0;
+    }
+    .menu-bottom-click {
+      backface-visibility: hidden;
+      top: 15px;
+      transform: rotate(-410deg);
+      transition: 0.55s 0.5s;
+    }
+
+    #main-nav {
+        padding: 0;
+        display: none;
+        transition: all 1s linear 0s;
+        &.active {
+            display: block;
+        }
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            a {
+                transition: all 0.2s linear 0s;
+                display: block;
+                text-align: center;
+                background: #ccc;
+                margin: 0 10px;
+                padding: 40px 0;
+                border-radius: 5px;
+                border: 10px solid #ccc;
+
+                span {
+                    font-size: 4em;
+                }
+                &:hover {
+                    border: 10px solid #ADADAD;
+                }
+            }
+        }
+    }
+}
+#info {
+    h4 {
+        color: #999999;
+        font-size: 22px;
+    }
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#intro {
+    height: 400px;
+    margin-top: 20px;
+    padding: 10px 0;
+    background: #DFDFE7 url(../images/desk.jpg) no-repeat center 0;
+    background-size: contain;
+    background-attachment: fixed;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+#portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .work {
+        background: rgba(255, 255, 255, 0.15);
+        float: left;
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 4px;
+        color: #999999;
+        h5 {
+            font-size: 22px;
+        }
+        span {
+            margin-right: 20px;
+        }
+        a {
+            &:hover {
+                color: #428bca;
+            }
+        }
+    }
+}
+#photography {
+    padding: 0;
+    #contain {
+        height: 660px;
+        overflow: scroll;
+        width: 100%;
+        .in_contain {
+            width: 8000px;
+        }
+    }
+    h3 {
+        margin-left: 20px;
+    }
+    img.lazy {
+        margin: 0 20px;
+        box-shadow: 10px 10px 8px 2px rgba(51, 51, 51, 0.78);
+    }
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #999999;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+    p + h4 {
+        margin-top: 28px;
+    }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 2000px;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-top: 20px;
+        padding: 0 20px;
+        h3 {
+            font-size: 30px;
+        }
+    }
+    body {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 42px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
