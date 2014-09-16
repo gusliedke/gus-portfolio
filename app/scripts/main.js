@@ -34,13 +34,13 @@ var Menu = {
 
 Menu.init();
 
-$(function(){
-	$('#twitter .tweet').twittie({
-	    dateFormat: '%b. %d, %Y',
-	    template: '{{tweet}} <div class="date">{{date}}</div>',
-	    count: 3
-	});
-});
+// $(function(){
+// 	$('#twitter .tweet').twittie({
+// 	    dateFormat: '%b. %d, %Y',
+// 	    template: '{{tweet}} <div class="date">{{date}}</div>',
+// 	    count: 3
+// 	});
+// });
 
 $(function(){
 	$("img.lazy").lazyload({
