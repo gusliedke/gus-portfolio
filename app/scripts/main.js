@@ -46,5 +46,24 @@ $(function(){
 	$("img.lazy").lazyload({
     	container: $("#contain")
 	});
-})
+});
+
+var $root = $('html, body');
+$('a').click(function() {
+    $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+});
+
+$('.top').hide();
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if(height  > 100) {
+        $('.top').show();
+    }
+    else {
+    	$('.top').hide();
+    }
+});
 

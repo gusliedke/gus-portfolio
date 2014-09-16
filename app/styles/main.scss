@@ -16,6 +16,12 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+section {
+    position: relative;
+}
+.top {
+    transition: all 1s linear;
+}
 /* Custom page header */
 .header {
     /* Make the masthead heading the same height as the navigation */
@@ -71,6 +77,9 @@ body {
         padding: 0;
         display: none;
         transition: all 1s linear 0s;
+        margin-bottom: 20px;
+        float: left;
+        width: 100%;
         &.active {
             display: block;
         }
@@ -87,7 +96,6 @@ body {
                 padding: 40px 0;
                 border-radius: 5px;
                 border: 10px solid #ccc;
-
                 span {
                     font-size: 4em;
                 }
@@ -107,22 +115,31 @@ body {
     margin-top: 50px;
 }
 #intro {
-    height: 400px;
-    margin-top: 20px;
+    height: 200px;
+    margin-bottom: 40px;
     padding: 10px 0;
-    background: #DFDFE7 url(../images/desk.jpg) no-repeat center 0;
+    background: #dfdfe7 url(../images/desk.jpg) no-repeat center -205px;
     background-size: contain;
     background-attachment: fixed;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+    border-top: 10px solid rgba(87, 87, 87, 0.6);
+    border-bottom: 10px solid rgba(87, 87, 87, 0.6);
+    h4 {
+        padding: 20px;
+        background: rgba(51, 51, 51, 0.901961);
+        color: #FFF;
+    }
 }
 #portfolio {
-    max-width: 1200px;
+    float: left;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 0;
+    padding: 0 20px;
     img {
         width: 100%;
         height: auto;
+    }
+    .glyphicon-arrow-up {
+        top: 20px;
     }
     .work {
         background: rgba(255, 255, 255, 0.15);
@@ -147,6 +164,11 @@ body {
 #photography {
     padding: 0;
     #contain {
+        &:hover {
+            cursor: ew-resize;
+        }
+    }
+    #contain {
         height: 660px;
         overflow: scroll;
         width: 100%;
@@ -157,9 +179,36 @@ body {
     h3 {
         margin-left: 20px;
     }
+    p {
+        margin-left: 20px;
+        font-size: 24px;
+        width: 50%;
+    }
     img.lazy {
         margin: 0 20px;
         box-shadow: 10px 10px 8px 2px rgba(51, 51, 51, 0.78);
+    }
+}
+#about {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    float: left;
+    h4 {
+        font-size: 26px;
+        margin: 20px 0;
+        padding: 20px 0;
+        font-weight: bold;
+        border-bottom: 1px solid #999;
+    }
+}
+.glyphicon-arrow-up {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    font-size: 2em;
+    &:hover {
+        text-decoration: none;
     }
 }
 
@@ -167,19 +216,9 @@ body {
 .footer {
     padding-top: 19px;
     color: #999999;
-}
-
-.container-narrow > hr {
-    margin: 30px 0;
-}
-
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-    p + h4 {
-        margin-top: 28px;
-    }
+    padding: 20px;
+    float: left;
+    width: 100%;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -197,7 +236,11 @@ body {
         padding-left: 0;
         padding-right: 0;
     }
-
+    #intro {
+        h4 {
+            margin: 0px 60px;
+        }
+    }
     /* Space out the masthead */
     .header {
         margin-top: 20px;
